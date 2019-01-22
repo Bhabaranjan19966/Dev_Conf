@@ -6,10 +6,8 @@ import {
   Grid,
   Header,
   Image,
-  Message,
   Segment
 } from "semantic-ui-react";
-import { Redirect } from "react-router";
 // import clientID from "../../config/keys";
 import "../css/style.css";
 

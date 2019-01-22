@@ -11,7 +11,6 @@ import {
 } from "semantic-ui-react";
 
 
-import Navbar from './navbar'
 
 export default class Home extends Component {
 
@@ -26,7 +25,6 @@ export default class Home extends Component {
     }
     return (
       <Fragment>
-        <Navbar></Navbar>
         <Segment placeholder style={homeContainer} padded='very'>
           <Grid columns={2} stackable textAlign="center">
             <Divider vertical>Or</Divider>

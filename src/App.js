@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
-import Navbar from './components/navbar';
 import axios from "axios";
 import './css/login.css';;
 
@@ -69,7 +68,6 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-      <Navbar></Navbar>
       
          <div className="ui container"> 
         <div className="ui grid">
