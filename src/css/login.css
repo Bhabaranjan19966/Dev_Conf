@@ -1,0 +1,26 @@
+label {
+    padding:inherit;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+
+}
+#container {
+margin-top:8rem;
+background-image: url('https://ak1.picdn.net/shutterstock/videos/8823241/thumb/1.jpg');
+padding-left: 16rem;
+}
+#layout {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#button {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    margin-left: 6rem;
+    padding-right: 2rem;
+}
+#btn{
+    margin-top: 8rem;
+    margin-left: 10rem;
+}

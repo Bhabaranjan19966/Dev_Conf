@@ -1,0 +1,15 @@
+h3 {
+    padding-left: 25rem;
+    color: white;
+    font-size: 1.714rem;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    line-height: 1.2857em;
+    margin: calc(2rem - .14285em) 0 1rem;
+    font-weight: 700;
+    padding: 0;
+    margin-left: 25rem;
+}
+
+#nav a img{
+    width: 4rem !important;
+   }
