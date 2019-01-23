@@ -16,62 +16,38 @@
     background: aliceblue;
 }
  .bargraph {
-     margin-bottom: 6vh;
+    margin-top: 10vh ;
     box-shadow: 0px 2px 6px;
 }
 .container {
     width:100%;
-    height:50vh;
+    /* height:50vh; */
 }
-.ui.inverted.dimmer .ui.loader{
+.cont-style{
+    position: relative;
+    overflow: hidden;
+}
+.code-container{
+    position: absolute;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 150px;
+}
+.code-container::-webkit-scrollbar {
+    display: none;
+  }
+.data, .cont-style {
+    width: 160vh;
+    height: 70vh;
+}
+
+.ui.primary.button, .ui.primary.buttons .button  {
+    margin:4vh;
+}
+/* .ui.inverted.dimmer .ui.loader{
     color: black;
     font-style: sans;
     font-size: 3rem;
-}
-.ui.inverted.dimmer {
-    width: 100wh;
-	height: 100vh;
-	color: #fff;
-	background: linear-gradient(-45deg,rgb(246, 252, 252), rgb(133, 199, 190));
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 20s ease infinite;
-	-moz-animation: Gradient 20s ease infinite;
-    animation: Gradient 20s ease infinite;
-    opacity: 0.93;
-}
+} */
 
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
