@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import "../css/graph.css";
 import Navbar from "./navbar";
 import DisplayGraph from './graphs';
-import Loader from 'react-loaders'
+// import Loader from 'react-loaders'
 
 import {
   Container,
@@ -86,7 +86,9 @@ export default class Graph extends Component {
               {this.state.displayLoader === true ? 
               
                 
-               <Loader type="pacman" />
+              <div class="ui active inverted dimmer">
+                <div class="ui medium text loader">Loading</div>
+               </div>
    
             
             : ""}
