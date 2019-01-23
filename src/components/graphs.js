@@ -5,7 +5,7 @@ import BarGraph from './barGraph';
 import '../css/graph.css'
 const DividerExampleVertical = () => (
   <Segment>
-    <Grid columns={2} relaxed='very' className="bargraph">
+    <Grid columns={2}>
 
    
 
