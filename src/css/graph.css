@@ -1,0 +1,13 @@
+.textarea {
+    height: 100vh;
+    width: 100%;
+}
+.graph-bg {
+    background: aliceblue;
+}
+.ui.card {
+    margin: 1em 0;
+    width: 30vh;
+    padding: 2vh;
+    margin-bottom: 3vh;
+}

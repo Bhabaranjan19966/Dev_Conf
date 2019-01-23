@@ -1,7 +1,7 @@
 import React , { Fragment}from "react";
 import {BrowserRouter , Route,Switch } from  "react-router-dom";
 import Login from '../components/Login'
-import Home from "../components/Home";
+import Graph from "../components/Graph";
 class AppRouter extends React.Component {
 
     render() {
@@ -10,7 +10,7 @@ class AppRouter extends React.Component {
                 <BrowserRouter>
                 <Switch>
                     <Route path = "/" component= {Login} exact={true}/>
-                    <Route path = "/home" component = {Home}  />
+                    <Route path = "/home" component = {Graph}  />
                 </Switch>
                 </BrowserRouter>
             </Fragment>
