@@ -1,18 +1,10 @@
 import React, { Component, Fragment } from "react";
 import "../css/graph.css";
 import Navbar from "./navbar";
-import DisplayGraph from './graphs';
-// import Loader from 'react-loaders'
-
-import {
-  Container,
-  Dropdown,
-  Header,
-  Card,
-  Divider,
-  Form
-} from "semantic-ui-react";
-
+import DisplayGraph from "./graphs";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { docco } from "react-syntax-highlighter/dist/styles/hljs";
+import { Container, Card, Form } from "semantic-ui-react";
 export default class Graph extends Component {
   componentWillMount() {
     this.setState({
@@ -20,16 +12,24 @@ export default class Graph extends Component {
         {
           id: "1",
           value:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+            "import SyntaxHighlighter from 'react-syntax-highlighter';\nimport { docco } from 'react-syntax-highlighter/dist/styles/hljs';\nconst Component = () => {\nconst codeString = '(num) => num + 1';\nreturn <SyntaxHighlighter language='javascript' style={docco}>{codeString}</SyntaxHighlighter>;  \n}",
           text: "Java"
         },
-        { id: "2", value: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)", 
-        text: "Javascript" },
-        { id: "3", value: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.", 
-        text: "HTML" }
+        {
+          id: "2",
+          value:
+            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n The point of using \nLorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \n'Content here, content here', making it look like readable English.\n Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, \nand a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, \nsometimes on purpose (injected humour and the like)",
+          text: "Javascript"
+        },
+        {
+          id: "3",
+          value:
+            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\n If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. \nAll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, \nmaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, \n combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. \n The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+          text: "HTML"
+        }
       ],
       selected: ["1"],
-      displayGraph:false
+      displayGraph: false
     });
   }
   selectedFile = (event, { value }) => {
@@ -42,16 +42,14 @@ export default class Graph extends Component {
   displayGraph = () => {
     this.setState({
       displayLoader: true,
-      displayGraph:false
+      displayGraph: false
     });
-    setTimeout (()=>{
+    setTimeout(() => {
       this.setState({
-        displayLoader:false,
-        displayGraph:true,
-      })
-    }
-    , 3000)
-    
+        displayLoader: false,
+        displayGraph: true
+      });
+    }, 2000);
   };
   render() {
     return (
@@ -59,53 +57,54 @@ export default class Graph extends Component {
         <Navbar />
         <Container className="process">
           <Card>
-          <Form onSubmit={this.handleFormSubmit} >
-            <Form.Dropdown
-              placeholder="select option"
-              // defaultValue={this.state.selected}
-              options={this.state.options}
-              renderLabel={({ text }) => 1}
-              onChange={this.selectedFile}
-            />
-          </Form>
+            <Form onSubmit={this.handleFormSubmit}>
+              <Form.Dropdown
+                placeholder="select option"
+                // defaultValue={this.state.selected}
+                options={this.state.options}
+                renderLabel={({ text }) => 1}
+                onChange={this.selectedFile}
+              />
+            </Form>
           </Card>
- 
+
           {this.state.displayContent ? (
-            
-            <code
-              id="content"
-              className="ui raised very padded text container segment graph-bg"
-            >
-              {this.state.content}
+            <div class="ui container">
+              <SyntaxHighlighter
+                language="javascript"
+                showLineNumbers="true"
+                style={docco}
+              >
+                {this.state.content}
+              </SyntaxHighlighter>
               <button
                 className="ui button raised primary right floated"
                 onClick={this.displayGraph}
               >
-                process
+                Deploy
               </button>
-              {this.state.displayLoader === true ? 
-              
-                
-              <div className="ui active inverted dimmer">
-                <div className="ui medium text loader"> Loading <b> Graphs </b> ... <br/>using custom configuration</div>
-               </div>
-   
-            
-            : ""}
-            </code>
-          
+            </div>
           ) : (
             ""
           )}
-              
-     
-       {this.state.displayGraph ===true?
-       
-        <DisplayGraph/>: ""}         
-  
-     
-       </Container>
-       
+
+          {this.state.displayGraph === true ? (
+            <div className="bargraph">
+            <DisplayGraph/>
+            </div>
+          ) : this.state.displayLoader === true ? (
+            <div class="loader-bg">
+              <div class="ui active inverted dimmer">
+                <div class="ui medium text loader">
+                  Preparing your graphs for you.
+                </div>
+              </div>
+              <p />
+            </div>
+          ) : (
+            ""
+          )}
+        </Container>
       </Fragment>
     );
   }

@@ -1,4 +1,3 @@
-/* @import 'loaders.css/src/animations/pacman.scss'; */
 .textarea {
     height: 100vh;
     width: 100%;
@@ -16,21 +15,66 @@
     padding:2vh;
     background: aliceblue;
 }
-.ui.inverted.dimmer .ui.loader {
+ .bargraph {
+     margin-bottom: 6vh;
+    box-shadow: 0px 2px 6px;
+}
+.container {
+    width:100%;
+    height:50vh;
+}
+.ui.inverted.dimmer .ui.loader{
     color: black;
     font-style: sans;
-    font-size: 2rem;
+    font-size: 3rem;
 }
- .bargraph {
-    padding:3vh;
-
+.ui.inverted.dimmer {
+    width: 100wh;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg,rgb(228, 241, 241), rgb(155, 199, 207), rgb(144, 208, 219), rgb(98, 199, 206));
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    opacity: 0.93;
 }
 
 
 
-/* .loader-hidden {
-  display: none;
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
-.loader-active {
-  display: block;
-} */
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}

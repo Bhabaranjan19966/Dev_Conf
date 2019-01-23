@@ -6,8 +6,8 @@ import '../css/graph.css'
 import { Tab } from 'semantic-ui-react'
 
 const panes = [
-  { menuItem: 'Tab 1', render: () => <Tab.Pane><BarGraph/></Tab.Pane> },
-  { menuItem: 'Tab 2', render: () => <Tab.Pane> <GraphMap/> </Tab.Pane> },
+  { menuItem: 'Ideas vs Rating', render: () => <Tab.Pane><BarGraph/></Tab.Pane> },
+  { menuItem: 'Heat Map', render: () => <Tab.Pane> <GraphMap/> </Tab.Pane> },
   
 ]
 
