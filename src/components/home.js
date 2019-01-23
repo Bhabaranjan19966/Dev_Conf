@@ -49,7 +49,7 @@ export default class Graph extends Component {
         displayLoader: false,
         displayGraph: true
       });
-    }, 2000);
+    }, 3000);
   };
   render() {
     return (
