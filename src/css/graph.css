@@ -17,7 +17,9 @@
     background: aliceblue;
 }
 .ui.inverted.dimmer .ui.loader {
-    color: white;
+    color: black;
+    font-style: sans;
+    font-size: 2rem;
 }
  .bargraph {
     padding:3vh;

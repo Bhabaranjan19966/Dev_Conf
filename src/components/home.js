@@ -86,8 +86,8 @@ export default class Graph extends Component {
               {this.state.displayLoader === true ? 
               
                 
-              <div class="ui active inverted dimmer">
-                <div class="ui medium text loader">Loading</div>
+              <div className="ui active inverted dimmer">
+                <div className="ui medium text loader"> Loading <b> Graphs </b> ... <br/>using custom configuration</div>
                </div>
    
             
