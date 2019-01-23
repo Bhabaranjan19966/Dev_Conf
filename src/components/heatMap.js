@@ -1,6 +1,5 @@
 import React from 'react';
 import HeatMap from 'react-heatmap-grid';
-import { Divider } from 'semantic-ui-react';
 
 class GraphMap extends React.Component{
 
