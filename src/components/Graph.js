@@ -55,8 +55,11 @@ export default class Graph extends Component {
             />
           </Form>
           </Card>
-
+         
+        
           {this.state.displayContent ? (
+             <div className="ui grid">
+              <div className="six wide column">
             <code
               id="content"
               className="ui raised very padded text container segment"
@@ -68,11 +71,18 @@ export default class Graph extends Component {
               >
                 process
               </button>
+
               {this.state.displaygraph === true ? "graph" : ""}
             </code>
+            </div>
+  
+            </div>
           ) : (
             ""
           )}
+         
+  
+ 
         </Container>
       </Fragment>
     );
