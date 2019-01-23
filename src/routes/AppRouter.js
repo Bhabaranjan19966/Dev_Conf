@@ -14,7 +14,6 @@ class AppRouter extends React.Component {
                 <Switch>
                     <Route path = "/" component= {Login} exact={true}/>
                     <Route path = "/home" component = {Home}  />
-                    <Route path = "/graphs" component = {Graphs}/>
                 </Switch>
                 </BrowserRouter>
             </Fragment>

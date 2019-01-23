@@ -2,12 +2,24 @@
     height: 100vh;
     width: 100%;
 }
-.graph-bg {
-    background: aliceblue;
+.graph {
+    padding: 15vh
 }
 .ui.card {
     margin: 1em 0;
-    width: 30vh;
+    width: 28vh;
     padding: 2vh;
     margin-bottom: 3vh;
 }
+.process {
+    padding:2vh;
+    background: aliceblue;
+}
+.ui.inverted.dimmer .ui.loader {
+    color: white;
+}
+ .bargraph {
+    padding:3vh;
+
+}
+
