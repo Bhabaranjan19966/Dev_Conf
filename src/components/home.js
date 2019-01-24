@@ -204,8 +204,8 @@ export default class Graph extends Component {
     return (
       <Fragment>
         <Navbar />
-        <Container className="process">
-        <div >
+        <Container >
+        <div className="process">
           <Card>
             <Form onSubmit={this.handleFormSubmit}>
               <Form.Dropdown
@@ -243,14 +243,16 @@ export default class Graph extends Component {
             ""
           )}
 
-          {this.state.displayGraph === true ? (
-            <div className="bargraph">
+        </div>
+        </Container>
+        <Container className="bargraph">
+        {this.state.displayGraph === true ? (
+           
               <DisplayGraph />
-            </div>
+            
           ) : (
             ""
           )}
-        </div>
         </Container>
       </Fragment>
     );
