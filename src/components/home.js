@@ -176,7 +176,7 @@ export default class Graph extends Component {
               arguments:
                 window: 5`,
           text: "Javascript"
-        },
+        }
       ],
       displayGraph: false
     });
@@ -205,6 +205,7 @@ export default class Graph extends Component {
       <Fragment>
         <Navbar />
         <Container className="process">
+        <div >
           <Card>
             <Form onSubmit={this.handleFormSubmit}>
               <Form.Dropdown
@@ -218,37 +219,38 @@ export default class Graph extends Component {
           </Card>
 
           {this.state.displayContent ? (
-            <Fragment>            <div className="cont-style">
-            <div className= "code-container"> 
-              <SyntaxHighlighter className="data"
-                language="javascript"
-                showLineNumbers="true"
-                style={docco}
+            <Fragment>
+              <div className="cont-style">
+                <div className="code-container">
+                  <SyntaxHighlighter
+                    className="data"
+                    language="javascript"
+                    showLineNumbers="true"
+                    style={docco}
+                  >
+                    {this.state.content}
+                  </SyntaxHighlighter>
+                </div>
+              </div>
+              <button
+                className="ui button raised primary right floated deploy-btn"
+                onClick={this.displayGraph}
               >
-                {this.state.content}
-              </SyntaxHighlighter>
-         
-            </div>
-            </div>
-                 <button
-                 className="ui button raised primary right floated deploy-btn"
-                 onClick={this.displayGraph}
-               >
-                 Deploy
-               </button>
-               </Fragment>
-
+                Deploy
+              </button>
+            </Fragment>
           ) : (
             ""
           )}
 
           {this.state.displayGraph === true ? (
             <div className="bargraph">
-            <DisplayGraph/>
+              <DisplayGraph />
             </div>
-          ) :(
+          ) : (
             ""
           )}
+        </div>
         </Container>
       </Fragment>
     );
