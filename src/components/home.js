@@ -242,10 +242,9 @@ export default class Graph extends Component {
           ) : (
             ""
           )}
+                  </div>
 
-        </div>
-        </Container>
-        <Container className="bargraph">
+        <div className="bargraph">
         {this.state.displayGraph === true ? (
            
               <DisplayGraph />
@@ -253,7 +252,9 @@ export default class Graph extends Component {
           ) : (
             ""
           )}
+        </div>
         </Container>
+
       </Fragment>
     );
   }

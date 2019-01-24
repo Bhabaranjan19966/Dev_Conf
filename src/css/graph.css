@@ -19,6 +19,7 @@
     margin-top: 10vh ;
     box-shadow: 0px 2px 6px;
     margin-bottom: 6vh;
+    background: aliceblue;
 }
  .container {
     width:100%;
@@ -39,50 +40,48 @@
     display: none;
   }
 .data, .cont-style {
-    width: 200vh;
+    width: 85vw;
     height: 70vh;
 }
 
 .ui.primary.button, .ui.primary.buttons .button  {
     margin:4vh;
 }
-@media screen and (min-width: 320px) and (max-height: 541px)
-{
-    .data, .cont-style {
-        width: 46vh;
-        height: 70vh;
-        left: 3vh;
-    }
-}
-@media screen and (min-width: 375px) and (max-height: 541px) 
-{
-    .data, .cont-style {
-        width: 57vh;
-        height: 70vh;
-        left: 3vh;
+
+@media screen and (min-width: 320px){
+    .ui.tabular.menu+.attached:not(.top).segment, .ui.tabular.menu+.attached:not(.top).segment+.attached:not(.top).segment {
+        width: 98vw;
+        overflow: scroll;
+        height: 65vh;
     }
 }
 
-@media screen and (min-width: 425px) and (max-height: 541px)
+@media screen and (min-width: 425px)
 {
     .data, .cont-style {
-        width: 65vh;
+        width: 79vw;
         height: 70vh;
         left: 3vh;
     }
+    /* .ui.tabular.menu+.attached:not(.top).segment, .ui.tabular.menu+.attached:not(.top).segment+.attached:not(.top).segment {
+        width: 98vw;
+        overflow: scroll;
+        height: 60vh;
+    } */
 }
-@media screen and (min-height: 542px){
-    .data, .cont-style {
-        width: 105vh;
-        height: 70vh;
-        left: 3vh;
-    }
-}
-@media screen and (min-width: 768px) and (max-height: 541px)
+
+@media screen and (min-width: 650px)
 {
     .data, .cont-style {
-        width: 120vh;
+        width: 82vw;
         height: 70vh;
         left: 3vh;
     }
+ 
 }
+@media screen and (min-width: 1024px){
+    .ui.tabular.menu+.attached:not(.top).segment, .ui.tabular.menu+.attached:not(.top).segment+.attached:not(.top).segment {
+        height: 100%;
+    }
+}
+
